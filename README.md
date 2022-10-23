@@ -22,7 +22,7 @@
 
 AvatarAPI, simply put, is a free API serving quotes from Avatar: The Last Airbender. The quotes are sourced from [AvatarQuotes](https://github.com/dotzenith/AvatarQuotes/) and the endpoints are available at https://avatarquotes.xyz/api/{endpoint} (See [Usage](#Usage) for the different endpoints)
 
-<img src="https://github.com/dotzenith/dotzenith/blob/main/assets/AvatarQuotes/AvatarQuotes.gif" alt="lovesay gif">
+<img src="https://github.com/dotzenith/dotzenith/blob/main/assets/AvatarAPI/AvatarAPI.png" alt="API response example">
 
 ---
 
@@ -43,7 +43,7 @@ $ http GET https://avatarquotes.xyz/api/quotes
     "num": 10,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "...",
             "Nation": "...",
             "Bending": "...",
@@ -70,7 +70,7 @@ $ http GET https://avatarquotes.xyz/api/quotes/character name==Aang
     "num": 10,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "Aang",
             "Nation": "...",
             "Bending": "...",
@@ -121,7 +121,7 @@ $ http GET https://avatarquotes.xyz/api/quotes/nation name==Fire
     "num": 10,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "...",
             "Nation": "Fire",
             "Bending": "...",
@@ -157,7 +157,7 @@ $ http GET https://avatarquotes.xyz/api/quotes/bending type==Earth
     "num": 10,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "...",
             "Nation": "...",
             "Bending": "Earth",
@@ -194,7 +194,7 @@ $ http GET https://avatarquotes.xyz/api/quotes/episode title==Imprisoned
     "num": 10,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "...",
             "Nation": "...",
             "Bending": "...",
@@ -257,7 +257,7 @@ $ http GET https://avatarquotes.xyz/api/quotes/book title==Water
     "num": 10,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "...",
             "Nation": "...",
             "Bending": "...",
@@ -293,7 +293,7 @@ $ http GET https://avatarquotes.xyz/api/quotes num==5
     "num": 5,
     "quotes": [
         {
-            "Quote": "..."
+            "Quote": "...",
             "Character": "...",
             "Nation": "...",
             "Bending": "...",
