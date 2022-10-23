@@ -1,2 +1,2 @@
 # AvatarAPI
-An API for quotes from Avatar: The Last Airbender
+An API for quotes from Avatar: The Last Airbender.
