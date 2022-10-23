@@ -20,7 +20,7 @@
 
 ### ❖ Information 
 
-AvatarAPI, simply put, is a free API serving quotes from Avatar: The Last Airbender. The quotes are sourced from [AvatarQuotes](https://github.com/dotzenith/AvatarQuotes/) and the endpoints are available at https://avatarquotes.xyz/api/{endpoint} (See #Usage for the different endpoints)
+AvatarAPI, simply put, is a free API serving quotes from Avatar: The Last Airbender. The quotes are sourced from [AvatarQuotes](https://github.com/dotzenith/AvatarQuotes/) and the endpoints are available at https://avatarquotes.xyz/api/{endpoint} (See [Usage](#Usage) for the different endpoints)
 
 <img src="https://github.com/dotzenith/dotzenith/blob/main/assets/AvatarQuotes/AvatarQuotes.gif" alt="lovesay gif">
 
@@ -366,7 +366,7 @@ After the step above, set up a reverse proxy using a webserver of your choice an
 
 <div align="center">
 
-   <img src="https://img.shields.io/static/v1.svg?label=License&message=CC0-1.0&color=F5E0DC&labelColor=302D41&style=for-the-badge">
+   <img src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=F5E0DC&labelColor=302D41&style=for-the-badge">
 
 </div>
 
