@@ -5,7 +5,7 @@ COPY . /app
 
 WORKDIR /app
 
-# Install poetry and gunicorn
+# Upgrade pip, install poetry and gunicorn
 RUN pip3 install -U pip poetry gunicorn
 
 # Already in a container, venv largely not needed
