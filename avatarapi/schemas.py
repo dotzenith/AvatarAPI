@@ -3,13 +3,7 @@ Module for importing quotes and setting up valid options for different fields
 """
 from typing import Literal
 
-import pandas as pd
 from pydantic import BaseModel
-
-from avatarapi.helpers import get_quotes_file
-
-# The main quotes dataframe
-Quotes = pd.read_csv(get_quotes_file(), sep="|")
 
 # Valid options for various fields
 Characters = Literal[

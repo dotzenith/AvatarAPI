@@ -7,21 +7,30 @@ from pathlib import Path
 import pandas as pd
 
 
-def get_quotes_file() -> Path:
+def get_quotes_df() -> pd.DataFrame:
     """
     Returns the top-level git repo's path
     """
-    
-    git_repo = subprocess.Popen(['git', 'rev-parse', '--show-toplevel'], 
-                                 stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
-    
-    return Path(f"{git_repo}/submodules/AvatarQuotes/Quotes.csv")
 
-# Avoiding circular import
-from avatarapi.models import Quotes
+    git_repo = (
+        subprocess.Popen(
+            ["git", "rev-parse", "--show-toplevel"], stdout=subprocess.PIPE
+        )
+        .communicate()[0]
+        .rstrip()
+        .decode("utf-8")
+    )
+
+    quotes_path = Path(f"{git_repo}/submodules/AvatarQuotes/Quotes.csv")
+
+    return pd.read_csv(quotes_path, sep="|")
 
 
-def make_dataframe(column: str, value: str, num: int) -> pd.DataFrame:
+# The main quotes dataframe
+Quotes = get_quotes_df()
+
+
+def make_custom_df(column: str, value: str, num: int) -> pd.DataFrame:
     """
     Make a filtered DataFrame for a given column
 

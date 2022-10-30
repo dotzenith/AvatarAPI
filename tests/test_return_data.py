@@ -7,7 +7,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from avatarapi.main import app
-from avatarapi.models import QuoteModel
+from avatarapi.schemas import ReturnQuotes
 
 
 class TestReturnData:
@@ -40,7 +40,7 @@ class TestReturnData:
 
         # Attempts to load the data in pydantic model
         # Test fails if this doesn't work
-        [QuoteModel(**quote) for quote in response["quotes"]]
+        ReturnQuotes(**response)
 
     @pytest.mark.parametrize(
         "route, num",

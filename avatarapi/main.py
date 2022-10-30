@@ -5,8 +5,8 @@ The main module for the api
 from fastapi import Query, Request
 
 from avatarapi.app import make_app
-from avatarapi.helpers import make_dataframe
-from avatarapi.models import *
+from avatarapi.helpers import Quotes, make_custom_df
+from avatarapi.schemas import *
 
 # Some definitions for usage later
 app = make_app()
@@ -29,7 +29,7 @@ async def character(request: Request, name: Characters = Query(), num: int = Num
     Get quotes from a specific character
     """
 
-    quotes = make_dataframe("Character", name, num)
+    quotes = make_custom_df("Character", name, num)
     return {"num": len(quotes), "quotes": quotes}
 
 
@@ -39,7 +39,7 @@ async def nation(request: Request, name: Nations = Query(), num: int = Num):
     Get quotes from a specific nation
     """
 
-    quotes = make_dataframe("Nation", name, num)
+    quotes = make_custom_df("Nation", name, num)
     return {"num": len(quotes), "quotes": quotes}
 
 
@@ -49,7 +49,7 @@ async def bending(request: Request, type: Bendings = Query(), num: int = Num):
     Get quotes from a character with specific bending type
     """
 
-    quotes = make_dataframe("Bending", type, num)
+    quotes = make_custom_df("Bending", type, num)
     return {"num": len(quotes), "quotes": quotes}
 
 
@@ -59,7 +59,7 @@ async def episode(request: Request, title: Episodes = Query(), num: int = Num):
     Get quotes from a specific episode
     """
 
-    quotes = make_dataframe("Episode", title, num)
+    quotes = make_custom_df("Episode", title, num)
     return {"num": len(quotes), "quotes": quotes}
 
 
@@ -69,5 +69,5 @@ async def book(request: Request, title: Books = Query(), num: int = Num):
     Get quotes from a specific nation
     """
 
-    quotes = make_dataframe("Book", title, num)
+    quotes = make_custom_df("Book", title, num)
     return {"num": len(quotes), "quotes": quotes}
