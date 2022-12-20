@@ -8,9 +8,9 @@
 
    <img src="https://img.shields.io/github/forks/dotzenith/AvatarAPI?color=DDB6F2&labelColor=302D41&style=for-the-badge">   
 
-   <img src="https://img.shields.io/github/workflow/status/dotzenith/AvatarAPI/Deployment?color=89b4fa&labelColor=302D41&style=for-the-badge&label=Deployment"/>
+   <img src="https://img.shields.io/github/actions/workflow/status/dotzenith/AvatarAPI/deploy.yml?branch=main&color=89b4fa&labelColor=302D41&style=for-the-badge&label=Deployment"/>
    
-   <img src="https://img.shields.io/github/workflow/status/dotzenith/AvatarAPI/Tests?color=ABE9B3&labelColor=302D41&style=for-the-badge&label=Tests"/>
+   <img src="https://img.shields.io/github/actions/workflow/status/dotzenith/AvatarAPI/test.yml?branch=main&color=ABE9B3&labelColor=302D41&style=for-the-badge&label=Tests"/>
    <br>
 </div>
 
