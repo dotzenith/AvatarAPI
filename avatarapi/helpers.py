@@ -3,11 +3,12 @@ Module for helper functions
 """
 import subprocess
 from pathlib import Path
+from typing import Any
 
-import pandas as pd
+import polars as pl
 
 
-def get_quotes_df() -> pd.DataFrame:
+def get_quotes_df() -> pl.DataFrame:
     """
     Returns the top-level git repo's path
     """
@@ -23,14 +24,14 @@ def get_quotes_df() -> pd.DataFrame:
 
     quotes_path = Path(f"{git_repo}/submodules/AvatarQuotes/Quotes.csv")
 
-    return pd.read_csv(quotes_path, sep="|")
+    return pl.read_csv(quotes_path, sep="|")
 
 
 # The main quotes dataframe
 Quotes = get_quotes_df()
 
 
-def make_custom_df(column: str, value: str, num: int) -> pd.DataFrame:
+def make_custom_df(column: str, value: str, num: int) -> dict[str, Any]:
     """
     Make a filtered DataFrame for a given column
 
@@ -46,7 +47,7 @@ def make_custom_df(column: str, value: str, num: int) -> pd.DataFrame:
 
     quotes_df = Quotes[Quotes[column] == value]
 
-    if num > (df_len := len(quotes_df.index)):
+    if num > (df_len := len(quotes_df)):
         num = df_len
 
-    return quotes_df.sample(n=num).to_dict("records")
+    return quotes_df.sample(n=num).to_dict(False)
