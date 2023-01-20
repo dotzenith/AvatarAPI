@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "avatarapi"
-version = "0.1.0"
+version = "0.2.0"
 description = "An API for quotes from Avatar: The Last Airbender"
 authors = ["dotzenith"]
 license = "MIT"
@@ -10,10 +10,10 @@ readme = "README.md"
 python = "^3.10"
 uvicorn = {extras = ["standard"], version = "^0.18.3"}
 fastapi = "^0.85.0"
-pandas = "^1.5.1"
 slowapi = "^0.1.6"
 requests = "^2.28.1"
 pydantic = "^1.10.2"
+polars = "^0.15.14"
 
 
 [tool.poetry.group.dev.dependencies]
