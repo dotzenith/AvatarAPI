@@ -149,7 +149,7 @@ $ http GET https://avatarquotes.xyz/api/quotes/nation name==Fire
 Fetches 10 random quotes by characters with a given bending style
 
 ```
-$ http GET https://avatarquotes.xyz/api/quotes/bending type==Earth
+$ http GET https://avatarquotes.xyz/api/quotes/bending bending==Earth
 ```
 
 ```json
@@ -360,7 +360,7 @@ After the step above, set up a reverse proxy using a webserver of your choice an
 
 ### ❖ What's New?
 
-0.1.0 - Initial Release
+0.2.0 - Replace pandas with polars
 
 ---
 
