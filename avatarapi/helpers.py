@@ -31,7 +31,7 @@ def get_quotes_df() -> pl.DataFrame:
 Quotes = get_quotes_df()
 
 
-def make_custom_df(column: str, value: str, num: int) -> dict[str, Any]:
+def make_custom_df(column: str, value: str, num: int) -> list[dict[str, Any]]:
     """
     Make a filtered DataFrame for a given column
 
@@ -44,10 +44,9 @@ def make_custom_df(column: str, value: str, num: int) -> dict[str, Any]:
     num: int
         The number of desired results
     """
-
-    quotes_df = Quotes[Quotes[column] == value]
+    quotes_df = Quotes.filter(pl.col(column) == value)
 
     if num > (df_len := len(quotes_df)):
         num = df_len
 
-    return quotes_df.sample(n=num).to_dict(False)
+    return quotes_df.sample(n=num).to_dicts()

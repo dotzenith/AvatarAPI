@@ -46,7 +46,7 @@ class TestResponseCodes:
             "/api/quotes",
             "/api/quotes/character?name=Katara",
             "/api/quotes/nation?name=Fire",
-            "/api/quotes/bending?type=All",
+            "/api/quotes/bending?bending=All",
             "/api/quotes/episode?title=Imprisoned",
             "/api/quotes/book?title=Fire",
         ],

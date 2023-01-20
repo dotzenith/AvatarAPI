@@ -19,7 +19,7 @@ async def quotes(request: Request, num: int = Num):
     Get 10 random quotes, or the specified number of quotes
     """
 
-    quotes = Quotes.sample(n=num).to_dict(False)
+    quotes = Quotes.sample(n=num).to_dicts()
     return {"num": len(quotes), "quotes": quotes}
 
 
@@ -44,12 +44,12 @@ async def nation(request: Request, name: Nations = Query(), num: int = Num):
 
 
 @app.get("/api/quotes/bending", response_model=ReturnQuotes)
-async def bending(request: Request, bending_type: Bendings = Query(), num: int = Num):
+async def bending(request: Request, bending: Bendings = Query(), num: int = Num):
     """
     Get quotes from a character with specific bending type
     """
 
-    quotes = make_custom_df("Bending", bending_type, num)
+    quotes = make_custom_df("Bending", bending, num)
     return {"num": len(quotes), "quotes": quotes}
 
 
