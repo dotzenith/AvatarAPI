@@ -360,7 +360,7 @@ After the step above, set up a reverse proxy using a webserver of your choice an
 
 ### ❖ What's New?
 
-0.2.1 - Dependency updates
+0.2.2 - Added docs endpoint
 
 ---
 

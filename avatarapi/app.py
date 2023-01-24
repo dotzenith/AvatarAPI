@@ -14,7 +14,7 @@ def make_app() -> FastAPI:
     Makes fastapi app with rate limiter and CORS
     """
 
-    app = FastAPI(docs_url=None, redoc_url=None)
+    app = FastAPI(docs_url="/docs", redoc_url=None)
 
     limiter = Limiter(key_func=get_remote_address, default_limits=["100/hour"])
     app.state.limiter = limiter
